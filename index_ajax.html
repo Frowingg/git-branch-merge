@@ -1,36 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link rel="stylesheet" href="css/style.css">
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+      integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link rel="stylesheet" href="css/style.css" />
     <title>PHP - Libri</title>
-</head>
-<body>
-
+  </head>
+  <body>
     <div id="root">
+      <header>
+        <!--Logo-->
+        <div class="logo">
+          <img src="" alt="" />
+        </div>
+        <!--list-->
+        <div class="list-menu">
+          <ul>
+            <li>
+              <a href="#">libri</a>
+            </li>
+            <li>
+              <a href="#">generi</a>
+            </li>
+            <li>
+              <a href="#">titoli</a>
+            </li>
 
-        <header>
-            
-        </header>
+            <!--lista exstra-->
+            <li>
+              <a href="#">titoli</a>
+            </li>
+          </ul>
+        </div>
+        <!--bar-->
+        <div class="search-bar">
+          <input type="text" />
+        </div>
+      </header>
 
-        <main>
-            <div class="container">
-                <!-- <div v-for="book in books" class="card"> -->
-                <div class="card">
-                    <img :src="book.poster" alt="book-img">
-                    <h2> {{book.title}} </h2>
-                    <h4> {{book.author}} </h4>
-                    <h5> {{book.year}} </h5>
-                </div>
-            </div>
-        </main>
-
+      <main>
+        <div class="container">
+          <div v-for="(book, index) in booksList" :key="index" class="card">
+            <img :src="book.cover" alt="book-img" />
+            <h2>{{book.title}}</h2>
+            <h4>{{book.author}}</h4>
+            <h5>{{book.year}}</h5>
+          </div>
+        </div>
+      </main>
     </div>
 
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>
