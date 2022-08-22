@@ -1,7 +1,7 @@
 var app = new Vue({
   el: "#root",
   data: {
-    url: "http://localhost:8888/php-ajax-dischi/Milestone-2/api.php",
+    url: "http://localhost:8888/git-branch-merge/api.php",
     booksList: [],
   },
   methods: {
