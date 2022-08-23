@@ -3,6 +3,7 @@
     
 
     if( empty($_GET['genre']) || $_GET['genre'] === 'all' ) {
+        header('Access-Control-Allow-Origin: *');
         header('Content-Type: application/json');
         echo json_encode($database);
     } else {
@@ -13,7 +14,7 @@
                 $filteredGenre = $genre;
             }
         }
-        
+        header('Access-Control-Allow-Origin: *');
         header('Content-Type: application/json');
         echo json_encode($filteredGenre);
 

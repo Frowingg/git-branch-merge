@@ -1,7 +1,9 @@
+console.log(window.location.hostname);
+
 var app = new Vue({
   el: "#root",
   data: {
-    url: "http://localhost:8888/git-branch-merge/api.php",
+    url: "./api.php",
     booksList: [],
   },
   methods: {
@@ -20,3 +22,4 @@ var app = new Vue({
     this.getBooks();
   },
 });
+console.log(window.location.hostname);
