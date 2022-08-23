@@ -1,5 +1,3 @@
-console.log(window.location.hostname);
-
 var app = new Vue({
   el: "#root",
   data: {
@@ -22,4 +20,3 @@ var app = new Vue({
     this.getBooks();
   },
 });
-console.log(window.location.hostname);
